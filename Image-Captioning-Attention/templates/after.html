@@ -1,0 +1,58 @@
+{%extends "base.html"%}
+    
+{%block content%}
+<script>
+	function textToAudio() {
+		let msg = document.getElementById("sp").value;
+		
+		let speech = new SpeechSynthesisUtterance();
+		speech.lang = "en-US";
+		
+		speech.text = msg;
+		speech.volume = 1;
+		speech.rate = 1;
+		speech.pitch = 1;
+		
+		window.speechSynthesis.speak(speech);
+	}
+  function exitFromApp()
+        {
+            console.log("in button");
+            navigator.app.exitApp();
+        }
+</script>
+<style>  
+.btn{
+    display: block;
+    width: 40%;
+    height: 60px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+    padding : 100px 100px;
+  }</style>
+<center>
+	<img src="{{url_for('static', filename='wave.png')}}" alt="image" class="wave" >
+	<h1 class='display-2' style="color:#32be8f;">Predicted Caption </h1>
+
+	<br>
+	<br>
+	
+<img src="{{url_for('static', filename='file.jpg')}}" alt="image" height=340px >
+
+<br>
+<textarea id="sp" name="text" rows="4" cols="50">{{data}}</textarea> 
+
+
+</center>
+
+{%endblock%}

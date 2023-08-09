@@ -1,0 +1,2 @@
+include ':maplocationpicker'
+include ':app'

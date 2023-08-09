@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+
+	tools:context=".MainActivity">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="230dp"
+		android:id="@+id/bg_top_header"
+
+		android:background="@drawable/ic_bg_topheader"/>
+
+	<ImageView
+		android:id="@+id/user_photo"
+		android:layout_width="71dp"
+		android:layout_height="71dp"
+		android:layout_marginStart="18dp"
+		android:layout_marginTop="16dp"
+		android:src="@drawable/app_icon"
+		/>
+
+
+	<TextView
+		android:id="@+id/user_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_marginStart="18dp"
+		android:layout_marginTop="32dp"
+		android:layout_marginEnd="83dp"
+		android:fontFamily="@font/mo_re"
+		android:text="Eye Vision"
+		android:textColor="#ffffff"
+		android:textSize="35dp" />
+
+	<Button
+		android:id="@+id/help"
+		android:layout_width="375dp"
+		android:layout_height="269dp"
+		android:layout_row="0"
+		android:layout_column="0"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginStart="18dp"
+		android:layout_marginTop="134dp"
+		android:layout_marginBottom="327dp"
+		android:background="@color/cardColor"
+		android:drawableTop="@drawable/help"
+		tools:layout_editor_absoluteX="16dp"
+		tools:layout_editor_absoluteY="345dp" />
+
+	<Button
+		android:id="@+id/speak"
+		android:layout_width="373dp"
+		android:layout_height="286dp"
+		android:layout_row="2"
+		android:layout_column="0"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginTop="414dp"
+		android:layout_marginEnd="17dp"
+		android:layout_marginBottom="31dp"
+		android:background="@color/cardColor"
+		android:drawableBottom="@drawable/speak"
+		tools:layout_editor_absoluteX="233dp"
+		tools:layout_editor_absoluteY="345dp" />
+</RelativeLayout>

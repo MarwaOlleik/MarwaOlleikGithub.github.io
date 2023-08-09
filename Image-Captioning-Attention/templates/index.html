@@ -1,0 +1,58 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+    <script>
+        /* JS comes here */
+        function Image() {
+            
+            let speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            
+            speech.text = "Please take a picture using camera";
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            
+            window.speechSynthesis.speak(speech);
+        }
+        function takeCap() {
+
+            let speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            
+            speech.text = "Wait one to two minutes to predict a caption";
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            
+            window.speechSynthesis.speak(speech);
+        }
+        
+    </script>	
+
+
+
+<div class="container">
+    <div class="img">
+        <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+            <input type="file" class="btn" name='file1' accept="capture" onclick="Image()">
+            <input type="submit" class="btn" name="btn" value='predict caption'onclick="takeCap()"> 
+       
+        </form>
+        
+    </div>
+    <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+        
+               
+                  <div class="div">
+                    <h2 class="title" style=" position: absolute;   top: 8px;  left: 16px; font-size: 30px;color:#32be8f;">Welcome to Eye Vision Image Captioning</h2>
+                    <img src="{{url_for('static', filename='bg.svg')}}" >
+
+  
+        
+    </div>
+
+
+
+{%endblock%}
